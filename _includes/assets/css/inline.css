@@ -1,6 +1,8 @@
 :root {
-	--primary: blue;
-	--secondary: white;
+	--primary: #5c005c;
+	--secondary: #fff;
+	--highlight-bg-1: #9690fc;
+	--highlight-bg-2: #f187f8;
 	--background: #FFF0EB;
 }
 
@@ -24,6 +26,7 @@ body {
 
 main {
 	max-width: 37.5em;
+	margin: 0 auto;
 }
 
 p,
@@ -79,6 +82,14 @@ pre {
 }
 
 /* Header Logo (style as h2) */
+
+header {
+	background: var(--highlight-bg-1);
+	background: linear-gradient(150deg, var(--highlight-bg-1) 0%, var(--highlight-bg-2) 100%);
+	text-align: center;
+	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+}
+
 header > em {
 	display: block;
 	font-size: 2em;
@@ -113,6 +124,12 @@ header nav li a[href]:not(:hover) {
 
 header nav li a[data-current="current item"] {
 	background-color: white;
+}
+
+/* footer */
+footer {
+    background-color: var(--highlight-bg-1);
+    color: var(--secondary);
 }
 
 /* Posts List */
